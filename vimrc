@@ -110,3 +110,10 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = 'V'
 map <C-n> :NERDTreeToggle<CR>
+
+"""""""""""""""""""""""""""""""""""""
+" color theme gruvbox config
+"""""""""""""""""""""""""""""""""""""
+set t_Co=256
+set background=dark
+colorscheme gruvbox
