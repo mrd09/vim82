@@ -1,1 +1,3 @@
-undodir
+undodir/*
+
+!undodir/*.keep

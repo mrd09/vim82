@@ -117,3 +117,11 @@ map <C-n> :NERDTreeToggle<CR>
 set t_Co=256
 set background=dark
 colorscheme gruvbox
+
+"""""""""""""""""""""""""""""""""""""
+" vim-gitgutter
+"""""""""""""""""""""""""""""""""""""
+set updatetime=100
+let g:gitgutter_highlight_lines = 1
+let g:gitgutter_highlight_linenrs = 1
+hi clear SignColumn
