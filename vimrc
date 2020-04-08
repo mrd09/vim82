@@ -109,7 +109,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = 'V'
-map <C-S-n> :NERDTreeToggle<CR>
+map <C-S-a> :NERDTreeToggle<CR>
 
 """""""""""""""""""""""""""""""""""""
 " color theme gruvbox config
