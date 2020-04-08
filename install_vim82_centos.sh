@@ -8,10 +8,10 @@ sudo yum install -y gcc make ncurses ncurses-devel && \
 sudo yum install -y ctags git tcl-devel ruby ruby-devel lua lua-devel luajit luajit-devel python python-devel perl perl-devel perl-ExtUtils-ParseXS perl-ExtUtils-XSpp perl-ExtUtils-CBuilder perl-ExtUtils-Embed
 
 sudo yum install -y yum-utils && \
-sudo yum-builddep vim-X11
+sudo yum-builddep -y vim-X11 && \
 
 wget ftp://ftp.vim.org/pub/vim/unix/vim-8.2.tar.bz2 && \
-sudo yum install -y lbzip2 && sudo tar -xf vim-8.2.tar.bz2
+sudo yum install -y lbzip2 && sudo tar -xf vim-8.2.tar.bz2 &&  \
 
 cd vim82
 
