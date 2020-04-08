@@ -109,7 +109,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = 'V'
-map <C-n> :NERDTreeToggle<CR>
+map <S-n> :NERDTreeToggle<CR>
 
 """""""""""""""""""""""""""""""""""""
 " color theme gruvbox config
@@ -125,3 +125,18 @@ set updatetime=100
 let g:gitgutter_highlight_lines = 1
 let g:gitgutter_highlight_linenrs = 1
 hi clear SignColumn
+
+"""""""""""""""""""""""""""""""""""""
+" vim-multiple-cursors
+"""""""""""""""""""""""""""""""""""""
+let g:multi_cursor_use_default_mapping=0
+
+" Default mapping
+let g:multi_cursor_start_word_key      = '<C-n>'
+let g:multi_cursor_select_all_word_key = '<A-n>'
+let g:multi_cursor_start_key           = 'g<C-n>'
+let g:multi_cursor_select_all_key      = 'g<A-n>'
+let g:multi_cursor_next_key            = '<C-n>'
+let g:multi_cursor_prev_key            = '<C-p>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
