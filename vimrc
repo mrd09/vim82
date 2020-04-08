@@ -109,7 +109,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = 'V'
-map <S-n> :NERDTreeToggle<CR>
+map <C-S-n> :NERDTreeToggle<CR>
 
 """""""""""""""""""""""""""""""""""""
 " color theme gruvbox config
@@ -140,3 +140,15 @@ let g:multi_cursor_next_key            = '<C-n>'
 let g:multi_cursor_prev_key            = '<C-p>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
+
+"""""""""""""""""""""""""""""""""""""
+" fzf
+"""""""""""""""""""""""""""""""""""""
+if !empty(glob("~/.fzf/"))
+    set rtp+=~/.fzf
+    map <S-f> :FZF<CR>
+endif
+
+if !empty(glob("/usr/bin/ag"))
+    map <S-a> :Ag<CR>
+endif
