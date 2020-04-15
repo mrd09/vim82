@@ -99,6 +99,17 @@ set nowrap
 set encoding=utf-8
 
 """""""""""""""""""""""""""""""""""""
+" vim foldcode
+" Usage _Onelvl: zc(close), zo(open), za(toggle), zr(reduce) _AllLvl: zC, zO, zA, zR are similar but for all
+"""""""""""""""""""""""""""""""""""""
+set foldmethod=indent
+" Keep all folds open when a file is opened
+augroup OpenAllFoldsOnFileOpen
+    autocmd!
+    autocmd BufRead * normal zR
+augroup END
+
+"""""""""""""""""""""""""""""""""""""
 " nerdtree config
 """""""""""""""""""""""""""""""""""""
 autocmd vimenter * NERDTree
