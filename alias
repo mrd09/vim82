@@ -1,0 +1,15 @@
+if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
+    GIT_PROMPT_ONLY_IN_REPO=1
+    source $HOME/.bash-git-prompt/gitprompt.sh
+fi
+
+alias gb='git checkout -'
+alias gmt='git mergetool --tool=vimdiff'
+alias gca='git commit --amend'
+alias gcp='git cherry-pick'
+alias glf='git log --follow -p'
+alias gl='git log --oneline -10'
+alias gpf='git push -u --force-with-lease'
+alias gst='git status'
+alias gf='git fetch --prune'
+alias grhu='git reset --hard @{upstream}'
