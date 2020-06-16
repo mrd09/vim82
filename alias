@@ -13,3 +13,9 @@ alias gpf='git push -u --force-with-lease'
 alias gst='git status'
 alias gf='git fetch --prune'
 alias grhu='git reset --hard @{upstream}'
+
+# lessc
+alias lessc='less -R'
+
+# mem_check
+alias mem_check='echo "-----------Show Current Total RAM Usage----------" && free -m && echo "" && echo "-----------Show Most Process RAM Usage(6th column-KB)----------" && echo "" && ps aux --sort rss | tail -10'
